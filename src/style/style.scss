@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,500;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+$base-font: 'Nunito Sans',
+sans-serif;
+$text-color-primary: white;
+$text-color-secondary:#000000;
+$text-color-blue: #0B24FB;
+* {
+    font-family: $base-font;
+}
+
+.wrapper {
+    background: url('../images/bg2.png') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.homeTitle {
+    padding-top: 5rem;
+    font-size: calc(max(6vw, 47px));
+    font-weight: 900;
+    text-align: center;
+    line-height: 1em;
+    color: $text-color-primary;
+}
+
+.homeDescription {
+    color: $text-color-primary;
+    font-style: italic;
+    text-align: center;
+    font-size: calc(max(2vw, 16px));
+}
+
+.topContainer {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+.topContainer img {
+    width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.topContainer button {
+    background-color: white;
+    width: calc(max(180px, 15%));
+    position: absolute;
+    z-index: 2;
+    top: 165px;
+    left: 13%;
+    margin: auto;
+    border: none;
+    border-radius: 25px;
+    height: 50px
+}
+
+.leftImg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.topContainerBottom span {
+    color: $text-color-blue;
+}
+
+.topContainerBottom {
+    padding: 2rem 0 2rem 2rem;
+    color: $text-color-secondary;
+    font-weight: 700;
+    text-align: right;
+    margin-right: 0;
+    width: 90%;
+}
+
+.writer {
+    color: $text-color-primary;
+    font-style: italic;
+}
+
+///bottom container
+.btmWrapper {
+    background-color: $text-color-secondary;
+    color: $text-color-primary;
+    // padding: 0.5rem 1rem;
+}
+
+.btmWrapper img {
+    width: 15rem;
+    height: 20rem;
+}
+
+///card info styling
+.infoCard {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.infoCardTitle {
+    font-weight: 900;
+}
+
+.helpTipsTitle {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.helpTipsTitle p {
+    padding-left: 1rem;
+    font-weight: 900;
+}
+
+///card help tips
+.helpTipsCardContainer {
+    width: 90%;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.helpTipsCardContainer p {
+    font-weight: 700;
+}
+
+.helpTipsCardContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.helpTipsTitleCard {
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    // opacity: 0.5;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    text-align: left;
+}
+
+.helpTipsTitleCard p {
+    font-size: 16px;
+    width: 250px;
+}
+
+.helpTipsTitleCard button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    font-size: 6vw;
+    text-align: center;
+    border-radius: 30px;
+}
+
+footer {
+    background-color: $text-color-blue;
+    width: 100%;
+    color: $text-color-primary;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    margin: 0;
+}
+
+.appVersion {
+    border-radius: 30px;
+    border: 2px solid $text-color-primary;
+    width: 50%;
+    font-weight: 300;
+}
