@@ -26,7 +26,6 @@ const TopSection = () => {
             Merriam-Webster.com Dictionary.
           </p>
           <p className="writer">-weekend team</p>
-          {/* <p>Testimonial</p> */}
         </div>
       </div>
     </>

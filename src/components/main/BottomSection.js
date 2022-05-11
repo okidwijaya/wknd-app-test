@@ -10,17 +10,14 @@ const BottomSection = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const getData = () => {
-      getAdditionalInfo()
-        .then((res) => {
-          setLoading(true);
-          setData(res.data);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    };
-    getData();
+    getAdditionalInfo()
+      .then((res) => {
+        setLoading(true);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   return (
