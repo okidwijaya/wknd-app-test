@@ -16,8 +16,6 @@ const Home = () => {
         <div className="cardTestimonialWrapper">
           <CarouselSlider initialIndex={3} />
         </div>
-
-        {/* <SliderTestimonial /> */}
         <BottomSection />
       </Layout>
     </>

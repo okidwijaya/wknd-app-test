@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import ReactDOM from "react-dom";
 import Flickity from "react-flickity-component";
 import { getTestimonial } from "../../utils/getData";
 import TestimonialCard from "../card/TestimonialCard";
@@ -53,13 +52,11 @@ export const CarouselSlider = (props) => {
         >
           {testData.map((data, idx) => {
             return (
-              // idx === currentSlider && (
               <TestimonialCard
                 key={idx}
                 title={data.by}
                 post={data.testimony}
               />
-              // )
             );
           })}
         </Flickity>
@@ -67,12 +64,3 @@ export const CarouselSlider = (props) => {
     </>
   );
 };
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>React Flickity</h1>
-//       <Carousel initialIndex={3} />
-//     </div>
-//   );
-// }
