@@ -1,384 +1,534 @@
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,500;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
-        $base-font: 'Nunito Sans',
-        sans-serif;
-        $text-color-primary: white;
-        $text-color-secondary:#000000;
-        $text-color-blue: #0B24FB;
-        * {
-            font-family: $base-font;
-        }
-        
-        .wrapper {
-            background: url('../images/bg2.png') no-repeat center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            width: 100%;
-            height: auto;
-            padding-bottom: 10em;
-        }
-        
-        .homeTitle {
-            padding-top: 5rem;
-            font-size: calc(max(6vw, 47px));
-            font-weight: 900;
-            text-align: center;
-            line-height: 1em;
-            color: $text-color-primary;
-        }
-        
-        .homeDescription {
-            color: $text-color-primary;
-            font-style: italic;
-            text-align: center;
-            font-size: calc(max(2vw, 16px));
-        }
-        
-        .topContainer {
-            width: 80%;
-            margin: auto;
-            position: relative;
-            text-align: center;
-        }
-        
-        .topContainer img {
-            width: 150px;
-            height: auto;
-            margin: auto;
-        }
-        
-        .topContainer button {
-            background-color: white;
-            width: calc(max(180px, 15%));
-            position: absolute;
-            z-index: 2;
-            top: 165px;
-            left: 13%;
-            margin: auto;
-            border: none;
-            border-radius: 25px;
-            height: 50px
-        }
-        
-        .leftImg {
-            width: 5rem;
-            height: 5rem;
-        }
-        
-        .topContainerBottom span {
-            color: $text-color-blue;
-        }
-        
-        .topContainerBottom {
-            padding: 2rem 0 2rem 2rem;
-            color: $text-color-secondary;
-            font-weight: 700;
-            text-align: right;
-            margin-right: 0;
-            width: 90%;
-        }
-        
-        .writer {
-            color: $text-color-primary;
-            font-style: italic;
-        }
-        
-        ///bottom container
-        .btmWrapper {
-            background-color: $text-color-secondary;
-            color: $text-color-primary;
-            padding-top: 10em;
-            // padding: 0.5rem 1rem;
-        }
-        
-        .btmWrapper img {
-            width: 15rem;
-            height: 20rem;
-        }
-        
-        ///card info styling
-        .infoCard {
-            width: 90%;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
-        
-        .infoCardTitle {
-            font-weight: 900;
-        }
-        
-        .helpTipsTitle {
-            width: 90%;
-            margin: auto;
-            padding: 2rem 0;
-        }
-        
-        .helpTipsTitle p {
-            padding-left: 1rem;
-            font-weight: 900;
-        }
-        
-        ///card help tips
-        .helpTipsCardContainer {
-            width: 90%;
-            margin: 2rem auto;
-            position: relative;
-        }
-        
-        .helpTipsCardContainer p {
-            font-weight: 700;
-        }
-        
-        .helpTipsCardContainer img {
-            width: 100%;
-            height: auto;
-        }
-        
-        .helpTipsTitleCard {
-            height: 70px;
-            width: 100%;
-            justify-content: space-between;
-            padding: 0.5rem 0.5rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            // opacity: 0.5;
-            position: absolute;
-            bottom: 0px;
-            z-index: 2;
-            text-align: left;
-        }
-        
-        .helpTipsTitleCard p {
-            font-size: 16px;
-            width: 250px;
-        }
-        
-        .helpTipsTitleCard button {
-            width: 45px;
-            height: 45px;
-            border: none;
-            font-size: 6vw;
-            text-align: center;
-            border-radius: 30px;
-        }
-        
-        footer {
-            background-color: $text-color-blue;
-            width: 100%;
-            color: $text-color-primary;
-            padding: 1.5rem;
-            text-align: center;
-            margin: 0;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        footer p {
-            margin: 0;
-        }
-        
-        .appVersion {
-            border-radius: 30px;
-            border: 2px solid $text-color-primary;
-            width: 50%;
-            font-weight: 300;
-        }
-        
-        //slider: 0.
-        .slider {
-            width: calc(max(350px, 65%));
-            position: absolute;
-            bottom: -76%;
-            height: 20vh;
-            margin-left: 1.5rem;
-            margin-right: 0;
-            display: flex;
-            // justify-content: center;
-            align-items: center;
-            overflow-y: hidden;
-            overflow-x: scroll;
-            background-color: none;
-            z-index: 2;
-            // overflow: hidden;
-        }
-        
-        .slider::-webkit-scrollbar {
-            display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        
-        .slider {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
-        
-        .slide {
-            opacity: 0;
-            transition-duration: 1s ease;
-        }
-        
-        .slide.active {
-            opacity: 1;
-            transition-duration: 1s;
-            transform: scale(1.08);
-        }
-        
-        .testimonialCard {
-            width: 220px;
-            height: 130px;
-            margin: 10px 1rem;
-            background-color: $text-color-primary;
-            padding: 10px;
-            p {
-                color: $text-color-secondary;
-                margin: 0 5px;
-                inline-size: 200px;
-                overflow: hidden;
-                height: 50px;
+            @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,500;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+            $base-font: 'Nunito Sans',
+            sans-serif;
+            $text-color-primary: white;
+            $text-color-secondary:#000000;
+            $text-color-blue: #0B24FB;
+            $font-sizing-based: calc(max(1vw, 16px));
+            $font-weight-content: 900;
+            $shadow-element-based :0px 8px 15px rgba(0,
+            0,
+            0,
+            0.1);
+            * {
+                font-family: $base-font;
             }
-        }
-        
-        ///carsouel flickity
-        .flickity-enabled {
-            position: relative;
-        }
-        
-        .flickity-enabled:focus {
-            outline: none;
-        }
-        
-        .flickity-viewport {
-            overflow: hidden;
-            position: relative;
-            height: 100%;
-        }
-        
-        .flickity-slider {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        /* draggable */
-        
-        .flickity-enabled.is-draggable {
-            -webkit-tap-highlight-color: transparent;
-            tap-highlight-color: transparent;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        .flickity-enabled.is-draggable .flickity-viewport {
-            cursor: move;
-            cursor: -webkit-grab;
-            cursor: grab;
-        }
-        
-        .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-            cursor: -webkit-grabbing;
-            cursor: grabbing;
-        }
-        /* ---- flickity-button ---- */
-        
-        .flickity-button {
-            position: absolute;
-            background: hsla(0, 0%, 100%, 0.75);
-            border: none;
-            color: #333;
-        }
-        
-        .flickity-button:hover {
-            background: white;
-            cursor: pointer;
-        }
-        
-        .flickity-button:focus {
-            outline: none;
-            box-shadow: 0 0 0 5px #19f;
-        }
-        
-        .flickity-button:active {
-            opacity: 0.6;
-        }
-        
-        .flickity-button:disabled {
-            opacity: 0.3;
-            cursor: auto;
-            /* prevent disabled button from capturing pointer up event. #716 */
-            pointer-events: none;
-        }
-        
-        .flickity-button-icon {
-            fill: #333;
-        }
-        /* ---- previous/next buttons ---- */
-        
-        .flickity-prev-next-button {
-            top: 50%;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            /* vertically center */
-            transform: translateY(-50%);
-        }
-        
-        .flickity-prev-next-button.previous {
-            left: 10px;
-        }
-        
-        .flickity-prev-next-button.next {
-            right: 10px;
-        }
-        /* right to left */
-        
-        .flickity-rtl .flickity-prev-next-button.previous {
-            left: auto;
-            right: 10px;
-        }
-        
-        .flickity-rtl .flickity-prev-next-button.next {
-            right: auto;
-            left: 10px;
-        }
-        
-        .flickity-prev-next-button .flickity-button-icon {
-            position: absolute;
-            left: 20%;
-            top: 20%;
-            width: 60%;
-            height: 60%;
-        }
-        /* ---- page dots ---- */
-        
-        .flickity-page-dots {
-            position: absolute;
-            width: 100%;
-            bottom: -25px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            text-align: center;
-            line-height: 1;
-        }
-        
-        .flickity-rtl .flickity-page-dots {
-            direction: rtl;
-        }
-        
-        .flickity-page-dots .dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin: 0 8px;
-            background: #333;
-            border-radius: 50%;
-            opacity: 0.25;
-            cursor: pointer;
-        }
-        
-        .flickity-page-dots .dot.is-selected {
-            opacity: 1;
-        }
+            
+            .navigationBar {
+                background-color: $text-color-primary;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin: auto auto auto 2rem;
+                }
+                p {
+                    text-align: left;
+                    font-size: $font-sizing-based;
+                }
+            }
+            
+            .wrapper {
+                background: url('../images/pattern1.png') no-repeat center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                width: 100%;
+                height: auto;
+                padding-bottom: 1em;
+            }
+            
+            .homeTitle {
+                padding-top: 4rem;
+                font-size: calc(max(6vw, 47px));
+                font-weight: 900;
+                text-align: center;
+                line-height: 1em;
+                color: $text-color-primary;
+            }
+            
+            .homeDescription {
+                color: $text-color-primary;
+                font-style: italic;
+                text-align: center;
+                font-size: calc(max(2vw, 16px));
+            }
+            
+            .topContainer {
+                width: 75%;
+                margin: auto;
+                position: relative;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                .topMainImg {
+                    width: 184px;
+                    height: calc(max(205px, 305px));
+                    margin: auto;
+                }
+                .topNdImg {
+                    position: absolute;
+                    width: calc(max(150px, 184px));
+                    right: calc(min(-32px, 40px));
+                    top: 94px;
+                    transform: rotate(10deg);
+                }
+                button {
+                    background-color: white;
+                    width: calc(max(231px, 25%));
+                    position: absolute;
+                    z-index: 2;
+                    top: 205px;
+                    margin: auto;
+                    border: none;
+                    border-radius: 25px;
+                    height: 55px;
+                    font-size: $font-sizing-based;
+                    font-weight: $font-weight-content;
+                    box-shadow: $shadow-element-based;
+                }
+            }
+            
+            .leftImg {
+                margin: 3rem 0;
+                width: calc(max(80px, 11rem));
+                height: calc(max(80px, 11rem));
+            }
+            
+            .topContainerBottom {
+                padding: 2rem 0 2rem 2rem;
+                color: $text-color-secondary;
+                font-weight: 700;
+                text-align: right;
+                margin-right: 0;
+                position: relative;
+                width: 90%;
+                p {
+                    font-size: calc(max(16px, 1.5vw));
+                }
+                span {
+                    color: $text-color-blue;
+                }
+            }
+            
+            .roundedBlue {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                z-index: 1;
+                position: absolute;
+                bottom: -60px;
+                left: 40px;
+                background-color: $text-color-blue;
+            }
+            
+            .writer {
+                color: $text-color-primary;
+                font-style: italic;
+            }
+            
+            ///end of top section styling
+            //start of card testimonialCard
+            .cardTestimonialWrapper {
+                position: relative;
+            }
+            
+            .testimonialCardContainer {
+                width: calc(max(90%, 60%));
+                background-color: none;
+                position: absolute;
+                z-index: 2;
+                left: 10%;
+                top: calc(max(-20vw, -200px));
+            }
+            
+            .testimonialcontainerTitle {
+                font-weight: 900;
+                font-size: calc(max(3vw, 28px));
+                color: $text-color-primary;
+                margin-bottom: 0;
+                // margin-left: 6%;
+            }
+            
+            .testimonialCard {
+                width: 250px;
+                height: 120px;
+                margin: 10px 0.5rem;
+                background-color: $text-color-primary;
+                padding: 10px;
+                .infoCardTitle {
+                    color: $text-color-secondary;
+                    margin: 10px 5px;
+                    height: auto;
+                    font-size: calc(max(3vw, 24px));
+                    font-weight: 900;
+                }
+                .infoCardPost {
+                    color: $text-color-secondary;
+                    margin: 0 5px;
+                    inline-size: 225px;
+                    overflow: hidden;
+                    height: 50px;
+                    // height: calc(max(70px, 50px));
+                    font-size: $font-sizing-based;
+                }
+            }
+            
+            //slider: 0.
+            .slider {
+                width: calc(max(350px, 65%));
+                position: absolute;
+                bottom: -76%;
+                height: 20vh;
+                margin-left: 1.5rem;
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                background-color: none;
+                z-index: 2;
+            }
+            
+            .slider::-webkit-scrollbar {
+                display: none;
+            }
+            /* Hide scrollbar for IE, Edge and Firefox */
+            
+            .slider {
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+                /* Firefox */
+            }
+            
+            .slide {
+                opacity: 0;
+                transition-duration: 1s ease;
+            }
+            
+            .slide.active {
+                opacity: 1;
+                transition-duration: 1s;
+                transform: scale(1.08);
+            }
+            
+            ///carsouel flickity
+            .flickity-enabled {
+                position: relative;
+            }
+            
+            .flickity-enabled:focus {
+                outline: none;
+            }
+            
+            .flickity-viewport {
+                background-color: none;
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+            
+            .flickity-slider {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            /* draggable */
+            
+            .flickity-enabled.is-draggable {
+                -webkit-tap-highlight-color: transparent;
+                // tap-highlight-color: transparent;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            .flickity-enabled.is-draggable .flickity-viewport {
+                cursor: move;
+                cursor: -webkit-grab;
+                cursor: grab;
+            }
+            
+            .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+                cursor: -webkit-grabbing;
+                cursor: grabbing;
+            }
+            /* ---- flickity-button ---- */
+            
+            .flickity-button {
+                position: absolute;
+                background: hsla(0, 0%, 100%, 0.75);
+                border: none;
+                color: #333;
+            }
+            
+            .flickity-button:hover {
+                background: white;
+                cursor: pointer;
+            }
+            
+            .flickity-button:focus {
+                outline: none;
+                box-shadow: 0 0 0 5px #19f;
+            }
+            
+            .flickity-button:active {
+                opacity: 0.6;
+            }
+            
+            .flickity-button:disabled {
+                opacity: 0.3;
+                cursor: auto;
+                /* prevent disabled button from capturing pointer up event. #716 */
+                pointer-events: none;
+            }
+            
+            .flickity-button-icon {
+                fill: #333;
+            }
+            /* ---- previous/next buttons ---- */
+            
+            .flickity-prev-next-button {
+                top: 50%;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .flickity-prev-next-button.previous {
+                left: -70px;
+            }
+            
+            .flickity-prev-next-button.next {
+                right: -70px;
+            }
+            /* right to left */
+            
+            .flickity-rtl .flickity-prev-next-button.previous {
+                left: auto;
+                right: 10px;
+            }
+            
+            .flickity-rtl .flickity-prev-next-button.next {
+                right: auto;
+                left: 10px;
+            }
+            
+            .flickity-prev-next-button .flickity-button-icon {
+                position: absolute;
+                left: 20%;
+                top: 20%;
+                width: 60%;
+                height: 60%;
+            }
+            /* ---- page dots ---- */
+            
+            .flickity-page-dots {
+                position: absolute;
+                width: 100%;
+                bottom: -25px;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                text-align: center;
+                line-height: 1;
+            }
+            
+            .flickity-rtl .flickity-page-dots {
+                direction: rtl;
+            }
+            
+            .flickity-page-dots .dot {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin: 0 8px;
+                background: #333;
+                border-radius: 50%;
+                opacity: 0.25;
+                cursor: pointer;
+            }
+            
+            .flickity-page-dots .dot.is-selected {
+                opacity: 1;
+            }
+            
+            //end of card testimonialCard
+            ///bottom container
+            .btmWrapper {
+                background-color: $text-color-secondary;
+                color: $text-color-primary;
+                padding-top: 10em;
+                // padding: 0.5rem 1rem;
+                .btmMainImg {
+                    width: 15rem;
+                    height: 20rem;
+                }
+                .btmNdImg {
+                    position: absolute;
+                    width: calc(max(70px, 100px));
+                    z-index: -1;
+                    right: -33px;
+                    top: 80px;
+                    transform: rotate(180deg);
+                    -webkit-transform: scaleX(-1);
+                    // transform: scaleX(-1);
+                }
+            }
+            
+            ///card info styling
+            .infoCard {
+                width: 90%;
+                margin: auto;
+                padding: 2rem 1rem;
+            }
+            
+            .infoCardTitle {
+                font-weight: 900;
+                font-size: calc(max(3vw, 24px));
+            }
+            
+            .infoCardPost {
+                font-size: calc(max(1vw, 14px));
+            }
+            
+            .helpTipsTitle {
+                width: 80%;
+                position: relative;
+                z-index: 2;
+                margin: auto;
+                padding: 2rem 0;
+                p {
+                    padding-left: 1rem;
+                    font-weight: 900;
+                }
+            }
+            
+            ///card help tips
+            .helpTipsCardContainer {
+                width: 90%;
+                margin: 2rem auto;
+                position: relative;
+                p {
+                    font-weight: 700;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            .helpTipsTitleCard {
+                height: 70px;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0.5rem 0.5rem;
+                background-color: rgba(0, 0, 0, 0.5);
+                // opacity: 0.5;
+                position: absolute;
+                bottom: 0px;
+                z-index: 2;
+                text-align: left;
+                p {
+                    width: 250px;
+                    font-size: $font-sizing-based;
+                    margin: auto;
+                }
+                button {
+                    width: 50px;
+                    height: auto;
+                    border: none;
+                    margin: auto;
+                    font-size: calc(max(1vw, 25px));
+                    text-align: center;
+                    border-radius: 25px;
+                }
+            }
+            
+            footer {
+                background-color: $text-color-blue;
+                width: 100%;
+                color: $text-color-primary;
+                padding: 1.5rem;
+                text-align: center;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                p {
+                    margin: 0;
+                }
+            }
+            
+            .appVersion {
+                border-radius: 30px;
+                border: 2px solid $text-color-primary;
+                width: calc(max(150px, 22%));
+                font-weight: 300;
+            }
+            
+            @media screen and (max-width: 767px) {
+                .flickity-prev-next-button {
+                    display: none;
+                }
+                .wrapper {
+                    padding-bottom: 7em;
+                }
+                .topNdImg,
+                .btmNdImg {
+                    display: none;
+                }
+            }
+            
+            @media screen and (min-width: 768px) and (max-width: 2550px) {
+                .cardTestimonialWrapper {
+                    left: auto;
+                    justify-content: center;
+                    width: 75%;
+                    margin: auto;
+                }
+                .btmWrapper p {
+                    text-align: center;
+                }
+                .topContainerBottom {
+                    margin: auto auto 150px auto;
+                    width: calc(max(450px, 45%));
+                    // font-size: ;
+                }
+                .testimonialCardContainer {
+                    top: -11vw;
+                }
+                .helpTipsTitleCard p {
+                    text-align: left;
+                    font-size: $font-sizing-based;
+                    padding-left: 0;
+                }
+                .helpTipsTitleCard button {
+                    height: auto;
+                    border-radius: 25px;
+                }
+                .testimonialCard {
+                    width: 325px;
+                    height: auto;
+                    .infoCardPost {
+                        inline-size: 290px;
+                    }
+                }
+                .infoCardPost {
+                    width: calc(max(450px, 45%));
+                    margin: auto;
+                }
+                .roundedBlue {
+                    bottom: -100px;
+                    left: 10px;
+                }
+                .testimonialCardContainer {
+                    top: -100px;
+                    margin: auto;
+                    width: 50%;
+                    left: 25%;
+                }
+            }

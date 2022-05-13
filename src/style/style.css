@@ -3,19 +3,34 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+.navigationBar {
+  background-color: white;
+}
+
+.navigationBar img {
+  width: 40px;
+  height: 40px;
+  margin: auto auto auto 2rem;
+}
+
+.navigationBar p {
+  text-align: left;
+  font-size: calc(max(1vw, 16px));
+}
+
 .wrapper {
-  background: url("../images/bg2.png") no-repeat center;
+  background: url("../images/pattern1.png") no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
   height: auto;
-  padding-bottom: 10em;
+  padding-bottom: 1em;
 }
 
 .homeTitle {
-  padding-top: 5rem;
+  padding-top: 4rem;
   font-size: calc(max(6vw, 47px));
   font-weight: 900;
   text-align: center;
@@ -31,38 +46,47 @@
 }
 
 .topContainer {
-  width: 80%;
+  width: 75%;
   margin: auto;
   position: relative;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.topContainer img {
-  width: 150px;
-  height: auto;
+.topContainer .topMainImg {
+  width: 184px;
+  height: calc(max(205px, 305px));
   margin: auto;
+}
+
+.topContainer .topNdImg {
+  position: absolute;
+  width: calc(max(150px, 184px));
+  right: calc(min(-32px, 40px));
+  top: 94px;
+  transform: rotate(10deg);
 }
 
 .topContainer button {
   background-color: white;
-  width: calc(max(180px, 15%));
+  width: calc(max(231px, 25%));
   position: absolute;
   z-index: 2;
-  top: 165px;
-  left: 13%;
+  top: 205px;
   margin: auto;
   border: none;
   border-radius: 25px;
-  height: 50px;
+  height: 55px;
+  font-size: calc(max(1vw, 16px));
+  font-weight: 900;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .leftImg {
-  width: 5rem;
-  height: 5rem;
-}
-
-.topContainerBottom span {
-  color: #0B24FB;
+  margin: 3rem 0;
+  width: calc(max(80px, 11rem));
+  height: calc(max(80px, 11rem));
 }
 
 .topContainerBottom {
@@ -71,7 +95,27 @@
   font-weight: 700;
   text-align: right;
   margin-right: 0;
+  position: relative;
   width: 90%;
+}
+
+.topContainerBottom p {
+  font-size: calc(max(16px, 1.5vw));
+}
+
+.topContainerBottom span {
+  color: #0B24FB;
+}
+
+.roundedBlue {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  bottom: -60px;
+  left: 40px;
+  background-color: #0B24FB;
 }
 
 .writer {
@@ -79,99 +123,49 @@
   font-style: italic;
 }
 
-.btmWrapper {
-  background-color: #000000;
-  color: white;
-  padding-top: 10em;
-}
-
-.btmWrapper img {
-  width: 15rem;
-  height: 20rem;
-}
-
-.infoCard {
-  width: 90%;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-
-.infoCardTitle {
-  font-weight: 900;
-}
-
-.helpTipsTitle {
-  width: 90%;
-  margin: auto;
-  padding: 2rem 0;
-}
-
-.helpTipsTitle p {
-  padding-left: 1rem;
-  font-weight: 900;
-}
-
-.helpTipsCardContainer {
-  width: 90%;
-  margin: 2rem auto;
+.cardTestimonialWrapper {
   position: relative;
 }
 
-.helpTipsCardContainer p {
-  font-weight: 700;
-}
-
-.helpTipsCardContainer img {
-  width: 100%;
-  height: auto;
-}
-
-.helpTipsTitleCard {
-  height: 70px;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0.5rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+.testimonialCardContainer {
+  width: calc(max(90%, 60%));
+  background-color: none;
   position: absolute;
-  bottom: 0px;
   z-index: 2;
-  text-align: left;
+  left: 10%;
+  top: calc(max(-20vw, -200px));
 }
 
-.helpTipsTitleCard p {
-  font-size: 16px;
-  width: 250px;
-}
-
-.helpTipsTitleCard button {
-  width: 45px;
-  height: 45px;
-  border: none;
-  font-size: 6vw;
-  text-align: center;
-  border-radius: 30px;
-}
-
-footer {
-  background-color: #0B24FB;
-  width: 100%;
+.testimonialcontainerTitle {
+  font-weight: 900;
+  font-size: calc(max(3vw, 28px));
   color: white;
-  padding: 1.5rem;
-  text-align: center;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 0;
 }
 
-footer p {
-  margin: 0;
+.testimonialCard {
+  width: 250px;
+  height: 120px;
+  margin: 10px 0.5rem;
+  background-color: white;
+  padding: 10px;
 }
 
-.appVersion {
-  border-radius: 30px;
-  border: 2px solid white;
-  width: 50%;
-  font-weight: 300;
+.testimonialCard .infoCardTitle {
+  color: #000000;
+  margin: 10px 5px;
+  height: auto;
+  font-size: calc(max(3vw, 24px));
+  font-weight: 900;
+}
+
+.testimonialCard .infoCardPost {
+  color: #000000;
+  margin: 0 5px;
+  inline-size: 225px;
+  overflow: hidden;
+  height: 50px;
+  font-size: calc(max(1vw, 16px));
 }
 
 .slider {
@@ -212,22 +206,6 @@ footer p {
   transform: scale(1.08);
 }
 
-.testimonialCard {
-  width: 220px;
-  height: 130px;
-  margin: 10px 1rem;
-  background-color: white;
-  padding: 10px;
-}
-
-.testimonialCard p {
-  color: #000000;
-  margin: 0 5px;
-  inline-size: 200px;
-  overflow: hidden;
-  height: 50px;
-}
-
 .flickity-enabled {
   position: relative;
 }
@@ -237,9 +215,11 @@ footer p {
 }
 
 .flickity-viewport {
+  background-color: none;
   overflow: hidden;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 .flickity-slider {
@@ -251,7 +231,6 @@ footer p {
 /* draggable */
 .flickity-enabled.is-draggable {
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -308,16 +287,15 @@ footer p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  /* vertically center */
   transform: translateY(-50%);
 }
 
 .flickity-prev-next-button.previous {
-  left: 10px;
+  left: -70px;
 }
 
 .flickity-prev-next-button.next {
-  right: 10px;
+  right: -70px;
 }
 
 /* right to left */
@@ -368,4 +346,180 @@ footer p {
 
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
+}
+
+.btmWrapper {
+  background-color: #000000;
+  color: white;
+  padding-top: 10em;
+}
+
+.btmWrapper .btmMainImg {
+  width: 15rem;
+  height: 20rem;
+}
+
+.btmWrapper .btmNdImg {
+  position: absolute;
+  width: calc(max(70px, 100px));
+  z-index: -1;
+  right: -33px;
+  top: 80px;
+  transform: rotate(180deg);
+  -webkit-transform: scaleX(-1);
+}
+
+.infoCard {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.infoCardTitle {
+  font-weight: 900;
+  font-size: calc(max(3vw, 24px));
+}
+
+.infoCardPost {
+  font-size: calc(max(1vw, 14px));
+}
+
+.helpTipsTitle {
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.helpTipsTitle p {
+  padding-left: 1rem;
+  font-weight: 900;
+}
+
+.helpTipsCardContainer {
+  width: 90%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.helpTipsCardContainer p {
+  font-weight: 700;
+}
+
+.helpTipsCardContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.helpTipsTitleCard {
+  height: 70px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  text-align: left;
+}
+
+.helpTipsTitleCard p {
+  width: 250px;
+  font-size: calc(max(1vw, 16px));
+  margin: auto;
+}
+
+.helpTipsTitleCard button {
+  width: 50px;
+  height: auto;
+  border: none;
+  margin: auto;
+  font-size: calc(max(1vw, 25px));
+  text-align: center;
+  border-radius: 25px;
+}
+
+footer {
+  background-color: #0B24FB;
+  width: 100%;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  margin: 0;
+}
+
+.appVersion {
+  border-radius: 30px;
+  border: 2px solid white;
+  width: calc(max(150px, 22%));
+  font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .flickity-prev-next-button {
+    display: none;
+  }
+  .wrapper {
+    padding-bottom: 7em;
+  }
+  .topNdImg,
+  .btmNdImg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 2550px) {
+  .cardTestimonialWrapper {
+    left: auto;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+  }
+  .btmWrapper p {
+    text-align: center;
+  }
+  .topContainerBottom {
+    margin: auto auto 150px auto;
+    width: calc(max(450px, 45%));
+  }
+  .testimonialCardContainer {
+    top: -11vw;
+  }
+  .helpTipsTitleCard p {
+    text-align: left;
+    font-size: calc(max(1vw, 16px));
+    padding-left: 0;
+  }
+  .helpTipsTitleCard button {
+    height: auto;
+    border-radius: 25px;
+  }
+  .testimonialCard {
+    width: 325px;
+    height: auto;
+  }
+  .testimonialCard .infoCardPost {
+    inline-size: 290px;
+  }
+  .infoCardPost {
+    width: calc(max(450px, 45%));
+    margin: auto;
+  }
+  .roundedBlue {
+    bottom: -100px;
+    left: 10px;
+  }
+  .testimonialCardContainer {
+    top: -100px;
+    margin: auto;
+    width: 50%;
+    left: 25%;
+  }
 }

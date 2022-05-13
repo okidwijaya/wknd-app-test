@@ -13,7 +13,10 @@ const Home = () => {
         <div className="wrapper">
           <TopSection />
         </div>
-        <CarouselSlider initialIndex={3} />
+        <div className="cardTestimonialWrapper">
+          <CarouselSlider initialIndex={3} />
+        </div>
+
         {/* <SliderTestimonial /> */}
         <BottomSection />
       </Layout>

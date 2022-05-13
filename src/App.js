@@ -1,6 +1,5 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Home, Notfound } from "./pages";
 function App() {
   return (

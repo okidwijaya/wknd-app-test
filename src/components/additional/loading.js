@@ -4,7 +4,7 @@ import load from "../../images/loading.gif";
 const Loading = () => {
   return (
     <>
-      <div>
+      <div className="col-12 col-lg-12 mx-auto">
         <img src={load} alt="loading" />
       </div>
     </>

@@ -3,16 +3,17 @@ import InfoCard from "../card/InfoCard";
 import HelpTips from "../card/HelpTips";
 import roboBtm from "../../images/roboBottom.png";
 import { getAdditionalInfo } from "../../utils/getData";
-import Loading from "../additional/loading";
+// import Loading from "../additional/loading";
+import pattern from "../../images/pattern2.png";
 
 const BottomSection = () => {
   const [datas, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getAdditionalInfo()
       .then((res) => {
-        setLoading(true);
+        // setLoading(true);
         setData(res.data);
       })
       .catch((err) => {
@@ -36,21 +37,28 @@ const BottomSection = () => {
           nothing prevents our being able to do what we like best"
         />
         <div className="helpTipsTitle">
-          <p>HELP &amp; TIPS</p>
-          {loading ? (
-            datas.map((data, idx) => (
-              <HelpTips title={data.title} source={data.image} key={idx} />
-            ))
-          ) : (
-            <Loading />
-          )}
+          <p className="infoCardTitle">HELP &amp; TIPS</p>
+          <div className="row mx-auto">
+            {/* {loading ? ( */}
+            {
+              datas.map((data, idx) => (
+                <div className="col-12 col-md-4 col-lg-4 p-0" key={idx}>
+                  <HelpTips title={data.title} source={data.image} />
+                </div>
+              ))
+              // ) : (
+              //   <Loading />
+              // )
+            }
+          </div>
+          <img className="btmNdImg" src={pattern} alt="pic pattern" />
         </div>
         <InfoCard
           title="RESOURCE"
           post="The wise man therefore always holds in these matters 
           to this principle of selection."
         />
-        <img src={roboBtm} alt="btm img" />
+        <img className="btmMainImg" src={roboBtm} alt="btm img" />
       </div>
     </>
   );
